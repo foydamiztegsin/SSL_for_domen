@@ -1,26 +1,27 @@
 ✅ Ubuntu 18.04 yoki undan avvali versiyalar uchun:
-
+```rb
 sudo apt-get update
 sudo apt-get install certbot
-
+```
 
 
 ✅ Ubuntu 20.04 yoki undan keyingi versiyalar uchun:
-
+```rb
 sudo apt update
 sudo apt install certbot
-
+```
 
 ❗️ pastdagi komandani berishdan oldin nginx ni stop qiling ✅ (sudo systemctl stop nginx) 80-portga ozod ulanishi uchun keyin esa
 ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
-✅ sudo certbot certonly --standalone --preferred-challenges http -d example.com   # example.com sizning domeningiz(domen.uz)
+```rb
+sudo certbot certonly --standalone --preferred-challenges http -d example.com   # example.com sizning domeningiz(domen.uz)
+```
 
-
-
+```
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Enter email address (used for urgent renewal and security notices)
  (Enter 'c' to cancel): 
-
+```
 
 """
 ✅ "Bu xabarda sizga Let's Encrypt sertifikatlarini yangilash va xavfsizlik xabarlari uchun elektron pochta manzilingizni so'ralmoqda. Sizdan pochta manzilingizni kiriting yoki 'c' tugmasini bosing va tasdiqlash xabarni bekor qiling.
@@ -35,11 +36,11 @@ Sizning e-mail manzilingizni kiritishingiz, Let's Encrypt xizmatlari bilan aloqa
 
 
 
-
+```
 Please read the Terms of Service at
 https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf. You must
 agree in order to register with the ACME server. Do you agree?
-
+```
 
 """
 Endi sizga Let's Encrypt xizmatlariga ro'yxatdan o'tish uchun shartnoma bilan tanishish va unga rozilik bildirishni so'raydi."""
@@ -48,13 +49,13 @@ Endi sizga Let's Encrypt xizmatlariga ro'yxatdan o'tish uchun shartnoma bilan ta
 
 
 
-
+```
 Would you be willing, once your first certificate is successfully issued, to
 share your email address with the Electronic Frontier Foundation, a founding
 partner of the Let's Encrypt project and the non-profit organization that
 develops Certbot? We'd like to send you email about our work encrypting the web,
 EFF news, campaigns, and ways to support digital freedom.
-
+```
 
 """
 Bu xabarda sizga Let's Encrypt loyihasining asosiy sheriki va Certbot dasturini ishlab chiqadigan elektron pochta manzilingizni Eff.org bilan ulashishga rozilik bildirishingiz so'ralmoqda. Eff.org sizga vebni shifrlash, EFF yangiliklari, kampaniyalari va raqamli erkinlikni qo'llab-quvvatlash yo'llarini haqida elektron pochta yuborishni istaydi."""
@@ -62,7 +63,7 @@ Bu xabarda sizga Let's Encrypt loyihasining asosiy sheriki va Certbot dasturini 
 ✅ ........ Y ni kiriting
 
 
-
+```rb
 Successfully received certificate.
 Certificate is saved at: /etc/letsencrypt/live/sizning_domeningiz_boladi/fullchain.pem
 Key is saved at:         /etc/letsencrypt/live/sizning_domeningiz_boladi/privkey.pem
@@ -75,7 +76,7 @@ If you like Certbot, please consider supporting our work by:
  * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
  * Donating to EFF:                    https://eff.org/donate-le
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+```
 """
 ✅ Tabriklayman! Sertifikatingiz muvaffaqiyatli olinganligi haqida xabarni oldingiz!"""
 
@@ -83,11 +84,11 @@ If you like Certbot, please consider supporting our work by:
 
 
 ✅ nginx ning faylida sozlamalarga ssl keylarini joylashtiring
-
+```rb
 sudo nano /etc/nginx/sites-available/sizning_nginx_faylingiz_nomi
+```
 
-
-
+```
 server {
     listen 80;
     listen 443 ssl;
@@ -106,7 +107,7 @@ server {
     
     # Qolgan server konfiguratsiyasini qo'shing
 }
-
+```
 
 ✅ klaviaturalar orqali:
 	ctrl+s 
