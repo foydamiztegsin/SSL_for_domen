@@ -117,23 +117,36 @@ server {
 
 
 ❗️ agar siz ushbu buyruqni avval bergan bo'lsangiz
+```rb
 sudo ln -s /etc/nginx/sites-available/sizning_nginx_faylingiz_nomi /etc/nginx/sites-enabled
-
+```
 
 ➡️ avval 
-sudo rm -r /etc/nginx/sites-enabled/sizning_nginx_faylingiz_nomi
+```rb
+sudo rm -r /etc/nginx/sites-enabled/sizning_nginx_faylingiz_nom
+```
 yordamida sites-enabled papka ichidagi faylni ochiring.
-va qaytadan yangilangan nginx faylingizni qoshing: 
+va qaytadan yangilangan nginx faylingizni qoshing:
+```rb
 	sudo ln -s /etc/nginx/sites-available/sizning_nginx_faylingiz_nomi /etc/nginx/sites-enabled
-
+```
 
 ✅ nginxni tekshiring
+```rb
 sudo nginx -t
+```
 
 
 ✅ nginxni qayta ishga tushiring
-
+```rb
 sudo service nginx restart
+```
+
+ <hr>
+ Mehnatimiz sizga foyda berayotgan bolsa GITHUB profilimizga obuna bo'ling va telegram kanalimizda reaksiyalarni qoldiring 👍
+ 
+# *E'tiboringiz uchun rahmat* Savollaringiz bo'lsa [Telegram](https://t.me/foydamizteg_sin)
+
 
 
 
